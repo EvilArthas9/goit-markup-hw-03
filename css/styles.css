@@ -5,7 +5,37 @@
     --additional-text-color: #2196F3;
     --white-tex-color: #FFFFFF;
 }
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.conteiner{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 /* index.html */
 .bodypage {
     background-color: var(--white-tex-color);
@@ -17,6 +47,16 @@ ul {
 }
 
 /* header */
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
 
 .header-logo {
     color: #000000;
@@ -32,7 +72,20 @@ ul {
     color: var(--additional-text-color);
 }
 
-.header-list a {
+.header-navigation {
+    display: flex;
+    margin-left: 93px;
+}
+
+.header-navigation .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-navigation a {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -41,16 +94,37 @@ ul {
     text-decoration: none;
 }
 
-.header-list a:hover,
-.header-list a:focus {
+.header-navigation a:hover,
+.header-navigation a:focus {
     color: var(--additional-text-color);
 }
 
-.header-list a.current {
+.header-navigation a.current {
     color: var(--additional-text-color);
 }
 
-.header-contact-item a {
+.header-navigation .current {
+    color: var(--additional-text-color);
+}
+
+.header-navigation.current {
+    color: var(--additional-text-color);
+}
+
+.header-auth {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-auth .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-auth a {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -59,36 +133,51 @@ ul {
     text-decoration: none;
 }
 
-.header-contact-item a:hover,
-.header-contact-item a:focus {
+.header-auth a:hover,
+.header-auth a:focus {
     color: var(--additional-text-color);
 }
-
 /* main */
 /* main hero */
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     color: var(--white-tex-color);
     background-color: #2F303A;
+    text-align: center;
 }
 
-.hero-title  {
+.hero-tittle {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    width: 696px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
 .btn-primary {
+    border-radius: 4px;
+    border: 0 solid transparent;
+    padding: 10px 32px;
+    display: inline-block;
+    min-width: 200px;
+
     color: var(--white-tex-color);
     background-color: var(--additional-text-color);
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
     cursor: pointer;
+    text-align: center;
 }
 
 /* наши достоинства */
